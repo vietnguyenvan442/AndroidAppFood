@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">App_Food</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="category">
+        <item>--All--</item>
+        <item>Pizza</item>
+        <item>Burger</item>
+        <item>Chicken</item>
+        <item>Drink</item>
+    </string-array>
+
+    <string name="add_button_desc">Add</string>
+    <string name="add_button_food_desc">Add Food</string>
+    <string name="add_button_user_desc">Add User</string>
+
+
+</resources>

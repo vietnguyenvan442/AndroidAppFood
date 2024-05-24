@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eightbitlab.com.blurview.BlurView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/blurView"
+    android:background="@drawable/blur_background"
+    app:blurOverlayColor="#20000000"
+    android:layout_margin="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img"
+            android:src="@drawable/food"
+            android:layout_gravity="center_vertical"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:paddingStart="10dp"
+            app:layout_constraintStart_toEndOf="@id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/nameTxt"
+                android:text="Mon an 1"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                tools:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/starTxt"
+                android:text="1"
+                android:textSize="18sp"
+                android:layout_marginStart="4dp"
+                android:textColor="@color/white"
+                tools:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/nameTxt"
+                app:layout_constraintTop_toBottomOf="@id/nameTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:src="@drawable/star"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="2dp"
+                app:layout_constraintBottom_toBottomOf="@id/starTxt"
+                app:layout_constraintStart_toEndOf="@id/starTxt"
+                app:layout_constraintTop_toTopOf="@id/starTxt"/>
+            <TextView
+                android:id="@+id/timeTxt"
+                android:text="09:00"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                tools:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/starTxt"
+                app:layout_constraintTop_toBottomOf="@id/starTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:src="@drawable/time"
+                app:layout_constraintStart_toEndOf="@id/timeTxt"
+                app:layout_constraintTop_toTopOf="@id/timeTxt"
+                app:layout_constraintBottom_toBottomOf="@id/timeTxt"
+                tools:tint="@color/black"
+                android:layout_marginStart="8dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"/>
+            <TextView
+                android:id="@+id/priceTxt"
+                app:layout_constraintStart_toStartOf="@id/timeTxt"
+                app:layout_constraintTop_toBottomOf="@id/timeTxt"
+                android:textColor="@color/red"
+                android:text="0$"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+            <TextView
+                android:id="@+id/btUpdate"
+                android:text="Update"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#2196F3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/btDelete"
+                android:text="Delete"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</eightbitlab.com.blurview.BlurView>
